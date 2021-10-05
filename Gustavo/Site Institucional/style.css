@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+.cabeca {
+    width: 100vw;
+    height: 80px;
+    background-color: #689595;
+    border-bottom: 3px solid #32b9cd;
+}
+ul {
+    list-style-type: none;
+}
+.container ul li{
+    display: inline;
+}
