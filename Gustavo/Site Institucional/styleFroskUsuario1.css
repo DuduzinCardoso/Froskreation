@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:#689595;
+    box-shadow: inset 100px 31px 250px 100px rgba(0.5, 0.5, 0.5, 0.5);
+
+}
+.container {
+    width: 1080px;
+    margin: auto;
+}
+.container2 {
+    width: 1080px;
+    height: 100vh;
+    display: flex;
+    margin: auto;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+.container .navbar {
+    padding-top: 60px;
+    color: #FFE600;
+}
+
+.header {
+    height: 150px;
+    width: 100vw;
+    justify-content: center;
+}
+.logos {
+    justify-content: space-evenly;
+    width: 264px;
+    height: 63px;
+}
+.titulo1{
+    width: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 30px;
+    float: left;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+.header a {
+    text-decoration: none;
+    color: #FFE600;
+    font-size: 30px;
+}
+.selecionado {
+    font-weight: 600;
+}
+.navbar {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+.telaRelacionavel {
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+}
+.areaADM {
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    float: left;
+    background-color: transparent;
+    margin-left: auto;
+    margin-right: auto;
+}
+.barralateral {
+    width: 10%;
+    height: 100vh;
+    display: flex;
+    float: left;
+    background-color: #082E2C;
+    display: table-column;
+}
+.opcao {
+    width: 100%;
+    height: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    color:#FFE600 ;
+    margin-left: 20px;
+}
+.opcao p {
+    height: 30px;
+    width: 200px;
+}
