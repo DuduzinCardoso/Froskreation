@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:#133030;
+    background-image: url(assets/Froskreation-site/sapo-sossegado-4.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.container {
+    width: 1080px;
+    margin: auto;
+}
+.container2 {
+    width: 1500px;
+    margin: auto;
+}
+.container .navbar {
+    padding-top: 60px;
+    color: #FFE600;
+}
+
+.header {
+    height: 150px;
+    width: 100vw;
+    justify-content: center;
+}
+.logos {
+    justify-content: space-evenly;
+    width: 264px;
+    height: 63px;
+}
+.titulo1{
+    width: 60px;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 30px;
+    float: left;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+.header a {
+    text-decoration: none;
+    color: #FFE600;
+    font-size: 30px;
+}
+.selecionado {
+    font-weight: 600;
+    text-decoration: #857700;
+}
+.navbar {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+/* BANNER */
+.banner {
+    width: 100vw;
+    height: 860px;
+    color: white;
+}
+.loginArea {
+    margin-top: 80px;
+}
+.loginInputs{
+    width: 600px;
+    height: 600px;
+    color: white;
+    background-color: black;
+    float: left;
+}
+.loginArea img{
+    float: left;
+}
+.loginTitulo {
+    width: 600px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 190px;
+    margin-top: 90px;
+}
+.entradas {
+    margin-top: 60px;
+    margin-left: 95px;
+    width: 600px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+.campo {
+    display: flex;
+    width: 400px ;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+}
+.cadastrar {
+    width: 600px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.mensagensLogin {
+    width: 155px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 222.5px;
+}
+.cadastrarP {
+    margin-left: 42px;
+}
+.cadastrar a {
+    color: #FFE600;
+    text-decoration: none;
+}
+.botaoLogin {
+    background-color:#FFE600;
+    width: 100px;
+    height: 50px;
+    color: black;
+    border-radius: 30px;
+    font-weight: 900;
+    border: none;
+    margin-left: 245px;
+    text-decoration: none;
+}
+
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #0F5450;
+    height: 150px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+h4 {
+    margin: 0;
+    padding: 0;
+}
