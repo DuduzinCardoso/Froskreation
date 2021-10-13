@@ -15,8 +15,7 @@ e adicionando uma borda inferior com tamanho e cor*/
     border-bottom: 3px solid  brown;
 }
 .header img{
-    width: 150px;
-    background-color:#598383af;
+    width: 200px;
     border-style: hidden;
 }
 /*Alinhando os itens do container no header
@@ -73,7 +72,7 @@ alterar tamanho das imagens: cover,
 imagem de fundo p/ nao se repetir: repeat*/
 .banner{
     color: black;
-    height: 690PX;
+    height: 684px;
     background-image: url(./assets/images/bg-frosk.jpg); 
     background-size: cover;
     background-repeat: no-repeat;
