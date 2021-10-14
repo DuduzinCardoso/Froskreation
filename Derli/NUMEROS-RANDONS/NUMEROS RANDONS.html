@@ -8,11 +8,12 @@
 </head>
 <body style="background-color: burlywood;">
     <h2>Gerando numeros</h2><br>
-    <button onclick="fun_gerar()">Gerar</button><br><br>
+    <img src="./alert.png" alt="" style="display: flex; margin-left: 100px;"><br>
+    <button onclick="fun_gerar()" style="margin-left: 45%;">Gerar</button><br><br>
     <div class="tab" style="display: flex; justify-content: space-around;">
-        <h3>Tanque | Temperatura °c | alerta</h3>
-        <h3>Tanque | Temperatura °c | alerta</h3>
-        <h3>Tanque | Temperatura °c | alerta</h3>
+        <h3 style="font-weight: bold;">Tanque | Temperatura °c | alerta</h3>
+        <h3 style="font-weight: bold;">Tanque | Temperatura °c | alerta</h3>
+        <h3 style="font-weight: bold;">Tanque | Temperatura °c | alerta</h3>
     </div>
 
     <div class="data" style="justify-content: space-evenly;">
@@ -25,12 +26,12 @@
 <script>
 function fun_gerar(){
     var random = Math.random();
-    var tanque1 = (random*30-2).toFixed(2);
+    var tanque1 = (random*6.5+5).toFixed(2);
     var tanque2 = (tanque1 * 1.08).toFixed(2);
     var tanque3 = (tanque1 * 0.96).toFixed(2);
 
     if(tanque1 <1 || tanque1 >25){
-        impressao1.innerHTML += `<span id="color1" style="background-color:black; color:white">Tanque 1:    ${Number(tanque1)}    **Sua produção está em estado letal** <br></span>`;
+        impressao1.innerHTML += `<span id="color1" style="background-color:black; color:white; padding:3px">Tanque 1:    ${Number(tanque1)}    **Sua produção está em estado letal** <br></span>`;
     }else if(tanque1 <5){
         impressao1.innerHTML += `<span id="color1" style="background-color:blue; color:white">Tanque 1:    ${Number(tanque1)}    **Estocagem em estado critíco <br></span>`;
     }else if(tanque1 <8){
@@ -53,7 +54,7 @@ function fun_gerar(){
     }else if(tanque2 <5){
         impressao2.innerHTML += `<span id="color1" style="background-color:blue; color:white">Tanque 2:    ${Number(tanque2)}    **Estocagem em estado critíco <br></span>`;
     }else if(tanque2 <8){
-        impressao2.innerHTML += `<span id="color1" style="background-color:skyblue; color:white">Tanque 2:    ${Number(tanque2)}    **Estocagem em alerta <br></span>`; 
+        impressao2.innerHTML += `<span id="color1" style="background-color:skyblue; color:white; height:15px;">Tanque 2:    ${Number(tanque2)}    **Estocagem em alerta <br></span>`; 
     }else if (tanque2 < 8.5){
         impressao2.innerHTML += `<span id="color1" style="background-color:grey; color:white">Tanque 2:    ${Number(tanque2)}    **Estocagem em alerta <br></span>`;
     }else if(tanque2 >9.5 && tanque2<= 10){
