@@ -3,17 +3,19 @@ body {
     padding: 0;
     width: 100vw;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color:#133030;
-    background-image: url(assets/Froskreation-site/sapo-sossegado-3.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-color:#133030;   
 }
 .container {
-    width: 1080px;
+    width: 60%;
     margin: auto;
 }
-.container .navbar {
-    padding-top: 60px;
+.container-header {
+    width: 60%;
+    height: 120px;
+    margin: auto;
+}
+.container-header .navbar {
+    padding-top: 70px;
     color: #FFE600;
 }
 
@@ -23,7 +25,6 @@ body {
     justify-content: center;
 }
 .logos {
-    justify-content: space-evenly;
     width: 264px;
     height: 63px;
 }
@@ -34,7 +35,7 @@ body {
     padding-top: 30px;
     float: left;
 }
-.header .container {
+.header .container-header {
     display: flex;
     justify-content: space-between;
 }
@@ -56,11 +57,14 @@ body {
 /* BANNER */
 .banner {
     width: 100vw;
-    height: 860px;
+    height: auto;
     color: white;
+    background-image: url(assets/Froskreation-site/sapo-sossegado-3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .banner .container {
-    height: 1000px;
+    height: 100vh;
     display: flex;
     align-items: flex-start;  
     flex-direction: column;  
@@ -77,7 +81,55 @@ body {
     font-size: 70px;
     font-weight: 500;
 }
-
+/* calculadora financeira */
+.calcFinanceira {
+    height: 800px;
+    color: white;
+}
+.calcFinanceira .container h1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.calcFinanceira .container h2 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.calcFinanceira .btn {
+    width: 60px;
+    height: 30px;
+    background-color:#FFE600 ;
+    color: black;
+    border-radius: 10px;
+    border: none;
+}
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+.calcInputs {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.calcInputs p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.calcInputs .inputDados {
+    width: 300px;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+}
 /* missao visao valores */
 .social {
     background-color: #689595;
@@ -149,17 +201,20 @@ body {
 
 .footer {
     background-color: #0F5450;
+    width: 100vw;
     height: 150px;
     color: white;
     margin: 0;
     padding: 0;
     display: flex;
     justify-content: center;
+    
 }
 
 .footer .container {
     display: flex;
     justify-content: center;
+    
 }
 
 h4 {
