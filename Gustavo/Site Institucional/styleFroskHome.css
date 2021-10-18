@@ -15,7 +15,7 @@ body {
     margin: auto;
 }
 .container-header .navbar {
-    padding-top: 70px;
+    padding-top: 76px;
     color: #FFE600;
 }
 
@@ -42,7 +42,7 @@ body {
 .header a {
     text-decoration: none;
     color: #FFE600;
-    font-size: 30px;
+    font-size: 20px;
 }
 .selecionado {
     font-weight: 600;
