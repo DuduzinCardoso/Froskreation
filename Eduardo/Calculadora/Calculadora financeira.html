@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora financeira</title>
+</head>
+<body>
+    <div class="calcFinanceira">
+        <div class="container">
+            <h1>Simulação de benefícios</h1>
+            <div class="calcInputs">
+                <p>Qual o valor médio (em reais) da carne de uma rã que você produz?</p> 
+                <input class="inputDados" id="primeiro" type="text" placeholder="preço"><br>
+
+                <p>Qual a quantidade média de rãs vendidas durante um mês?</p>
+                <input class="inputDados" id="segundo" type="text" placeholder="quantidade de rãs"><br>
+
+                <p>Caso tenha uma taxa de mortalidade dos animais, insira o valor da quantidade média de rãs perdidas durante um mês:</p>
+                <input class="inputDados" id="terceiro" type="text" placeholder="valor mortalidade"><br><br><br>
+
+                <h2>Você vende rãs apenas no inverno? (4 meses)</h2><br>
+                <div class="botoes">
+                    <button class="btn" onclick="inverno()"> Sim</button>
+                    <button class="btn" onclick="mes()"> Não</button>
+                </div>
+            </div>
+
+            <div> 
+                <p id="magica"></p>
+            </div>
+            <div id="sumiuzinho" style="display: none">
+            <br>Qual a quantidade de meses que você vende os seus produtos em um ano? 
+            <select id="escolha" onchange="listinha()">
+                <option value="0">escolha a quantidade de meses</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select> <br>
+            <button onclick="carregaja()"> Calcular preços</button>
+        </div>
+        <div id="sumiu" style="display: block">
+
+        </div>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+    var total = 0
+    var totalzinho = 0
+    var totalzao = 0
+    var total_final = 0
+    var total_por = 0
+
+    function carregar (){
+    var total = primeiro.value * segundo.value * 4 
+    var totalzinho = primeiro.value * terceiro.value * 4
+    var totalzao = total * 2 + Number(total)
+    var total_final = (Number(totalzinho * 75)) / 100
+    var total_por = totalzinho - total_final
+    magica.innerHTML = `<div id="sumiu" style="display: block"> Não utilizando a nossa solução, teremos um valor médio de R$${total} das rãs vendidas durante o inverno
+    e mais a perda de produto em um custo de R$${totalzinho}.<br><br>
+    Utilizando a nossa solução, teremos cerca de R$${totalzao} da sua renda aumentada (200%) e também fazendo uma produção
+    para o ano todo, seu prejuízo financeiro pela mortalidade também diminuiria para R$${total_por} (25%).</div>`
+    }
+    function carrega(){
+    sumiuzinho.style.display = 'block';
+    sumiu.style.display = 'none'
+    }
+
+    function carregaja(){
+    var total = primeiro.value * segundo.value * (12 - escolha.value)
+    var totalzinho = primeiro.value * terceiro.value * escolha.value
+    var totalzao = total * 2 + Number(total)
+    var total_final = (Number(totalzinho * 75)) / 100
+    var total_por = totalzinho - total_final
+    magica.innerHTML = `Não utilizando a nossa solução, teremos um valor médio de R$${total} das rãs vendidas durante o inverno
+    e mais a perda de produto em um custo de R$${totalzinho}.<br><br>
+    Utilizando a nossa solução, teremos cerca de R$${totalzao} da sua renda aumentada (200%) e também fazendo uma produção
+    para o ano todo, sua taxa de mortalidade também diminuiria para R$${total_por} (25%) em forma de custo`
+    }
+</script>
