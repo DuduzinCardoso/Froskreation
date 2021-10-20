@@ -36,14 +36,25 @@
 </html>
 <script>
     function trocaTela(){
-        var email = inpt_email.value;
+        var axemail = inpt_email.value;
         var senha = inpt_senha.value;
 
-        if (email == "emanuelly.lucena@gmail.com" && senha == "Manu1234@"){
-            window.location.href = "frosk-telaUsuario.html"
+        // O campo usuário deve conter pelo menos 5 caracteres, e no máximo 25.
+        // Conter @.
+        // O email deve terminar com ".com" OU ".com.br".
+
+        if ((axemail.indexOf("@") == 5 || (axemail.indexOf("@") <= 25 && axemail.indexOf("@") >= 5 )) && (axemail.endsWith(".com") == true || axemail.endsWith(".com.br"))) {
+            alert("email válido")
+        }
+        else{
+            alert("Email inválido")
+        };
+        if (axemail == "emanuelly.lucena@gmail.com" && senha == "Manu1234@"){
+            window.location.href = "frosk-telaUsuario.html";
         }
         else {
-            alert("Email ou senha inválidos")
+            alert("Verifique suas credenciais")
         };
+
     }
 </script>
