@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    padding: 0;
+    margin: 0;
+    border: white;
+    background-image:url("./imagens/froskreation-home-background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    display: flex; 
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+    justify-content: center;
+}
+.header {
+    color: #000;
+    border-bottom: 3px solid #ffee00;
+    
+}
+
+.header .container{
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+ 
+}
+
+.selecionado {
+    font-weight:  bold;
+}
+
+.navbar {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-left: 500px;
+}
+
+.header a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+
+}
+.login {
+    margin-top:80px ;
+}
+.login_ipt {
+    width:500px ;
+    height :500px ;
+    color: white;
+    background-color: black;
+    float: left;
+}
+.login  img {
+    float: left;
+}
+.titulo {
+    width: 600px ;
+    height : 50px ;
+    justify-content: center;
+    align-items: center;
+    margin-left : 32% ;
+    margin-top: 90px ;
+}
+.campos {
+    margin-top:60px ;
+    margin-left: 55px ;
+    width: 450px ;
+    height: 150px ;
+    justify-content:center;
+    align-items: center;
+}
+.cpm {
+    display:flex;
+    width:  410px ;
+    height: 40px ;
+    border: radius 20px;
+    border: none;
+    text-align: center;
+}
+.cadastro {
+    width : 600px ;
+    height : 100px ;
+    justify-content: center;
+    align-items: center;
+}
+.naopossui {
+    width: 155px;
+    height: 60px ;
+    justify-content: center;
+    align-items: center;
+    margin-left: 31% ;
+}
+.cadastrar1 {
+    margin-left:  30% ;
+    align-items: center;
+}
+.cadastro  a {
+    color:#adff2f ;
+    text-decoration: none;
+}
+.btn_login {
+    background-color:  #d9ff2f ;
+    width:55px ;
+    height:  30px ;
+    color: black;
+    border-radius:25px ;
+    font-weight:600;
+    border: black;
+    margin-left:47% ;
+    text-decoration: none;
+    align-items: center;
+   
+}
