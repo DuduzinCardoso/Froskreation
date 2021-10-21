@@ -1,0 +1,66 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.header a {
+    text-decoration: none;
+    color:#ffe657 ;
+}
+
+.banner{
+    height: 900px;
+    background-image:url("./imagens/incrementum-home-background.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    justify-content: center;
+    display: flex;    
+}
+
+.header p {
+    width: 40%;
+    height: 40%;
+    margin-top: 21%;
+   margin-left: 0%;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header .container{
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navbar {
+    width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-top: 40px;
+    margin-right: 40%;
+}
+.social {
+    padding: 60px 0;   
+}
+
+.social .container1{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.social .titulo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.social h2 {
+    display: flex;
+    padding: 0;
+    border-radius: 20px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    margin: 0;  
+    margin-top: 0;
+}
