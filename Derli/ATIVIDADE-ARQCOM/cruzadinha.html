@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+.disabled  {
+    background-color: black;
+}
+.class {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+
+}
+table{
+  width: 50%;
+  border-collapse: collapse;
+  display: block;
+}
+tr{
+    height: 30px;
+}
+td{
+    width: 30px;
+    border: 3px ridge black;
+    border-collapse: collapse;
+    padding: 4px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    text-align: center;
+}
+input{
+    width: 40px;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 4px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    text-align: center;
+}
+</style>
+</head>
+<script>
+    function teste(){
+        
+        if (c1.value + c2.value + c3.value + c4.value + c5.value + c6.value + c7.value + c8.value == "quadcore"){
+
+            impressao.innerHTML += "Palavra 1: Quadcore<br>"
+        }else{
+            console.log("erro na  quadcore")
+
+        }
+
+        if (j1.value + k1.value + l1.value + m1.value + n1.value == "eprom"){
+            impressao.innerHTML += "Palavra 2: EPROM <br>"
+        }else{
+            console.log("erro na eprom")
+        }
+
+
+        if(l1.value +l2.value + l3.value + l4.value +l5.value + l6.value + l7.value + l8.value + l9.value + l10.value + l11.value +l12.value+ l13.value == "registradores"){
+            impressao.innerHTML += "Palavra 3: registradores <br>"
+        }else{
+            console.log("erro na registradores")
+        }
+
+        if(a2.value + b2.value + c2.value == "cpu"){
+            impressao.innerHTML += "Palavra 4: cpu<br>"
+        }else{
+            console.log("erro na cpu")
+        }
+
+        if(c4.value + d4.value + e4.value + f4.value + g4.value + h4.value + i4.value + j4.value == "dualcore"){
+            impressao.innerHTML += "Palavra 5: dualcore<br>"
+        }else{
+            console.log("erro na dualcore")
+        }
+        
+
+    }
+</script>
+<body>
+<div class="class">
+<h1>Capoeira vila maria</h1>
+<button onclick="teste()">Botao</button><br>
+<div id="impressao"></div>
+<table>
+  <tr 1>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled  id="b1" maxlength="1"></td>
+    <td><input class="word1" id="c1" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word2" id="j1" maxlength="1"></td>
+    <td><input class="word2" id="k1" maxlength="1"></td>
+    <td><input class="word2,word3" id="l1" maxlength="1"></td>
+    <td><input class="word2" id="m1" maxlength="1"></td>
+    <td><input class="word2" id="n1" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+
+  </tr>
+  <tr 2>
+    <td><input class="word4" id="a2" maxlength="1"></td>
+    <td><input class="word4" id="b2" maxlength="1"></td>
+    <td><input class="word1,word4" id="c2" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word3" id="l2" maxlength="1"></td>
+    <td><input  class="disabled" disabled  maxlength="1"></td>
+    <td><input  class="disabled" disabled  maxlength="1"></td>
+    <td><input  class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+
+  </tr>
+  <tr 3>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word1" id="c3" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word3" id="l3" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+
+  </tr>
+  <tr 4>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word1,word5" id="c4" maxlength="1"></td>
+    <td><input class="word5" id="d4" maxlength="1"></td>
+    <td><input class="word5" id="e4" maxlength="1"></td>
+    <td><input class="word5" id="f4" maxlength="1"></td>
+    <td><input class="word5,word6" id="g4" maxlength="1"></td>
+    <td><input class="word5" id="h4" maxlength="1"></td>
+    <td><input class="word5" id="i4" maxlength="1"></td>
+    <td><input class="word5" id="j4" maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word3,word7" id="l4" maxlength="1"></td>
+    <td><input class="word7" id="m4" maxlength="1"></td>
+    <td><input  class="disabled" disabled  maxlength="1"></td>
+    <td><input  class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+
+  </tr>
+  <tr 5>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word1" id="c5" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word6" id="g5" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word3" id="l5" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    
+  </tr>
+  <tr 6>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word1" id="c6" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input  class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word3" id="l6" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    
+  </tr>
+  <tr 7>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word1" id="c7" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word3" id="l7" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word8" id="o7"  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    
+  </tr>
+  <tr 8>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word9" id="b8" maxlength="1"></td>
+    <td><input class="word1,word9" id="c8" maxlength="1"></td>
+    <td><input class="word9" id="d8" maxlength="1"></td>
+    <td><input class="word9" id="e8" maxlength="1"></td>
+    <td><input class="word9" id="f8" maxlength="1"></td>
+    <td><input class="word9,word10" id="g8" maxlength="1"></td>
+    <td><input class="word9" id="h8" maxlength="1"></td>
+    <td><input class="word9,word11" id="i8" maxlength="1"></td>
+    <td><input class="word9" id="j8" maxlength="1"></td>
+    <td><input class="word9" id="k8" maxlength="1"></td>
+    <td><input class="word3,word9" id="l8" maxlength="1"></td>
+    <td><input class="word9" id="m8" maxlength="1"></td>
+    <td><input class="word9" id="n8" maxlength="1"></td>
+    <td><input class="word8,word9" id="o8" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    
+  </tr>
+  <tr 9>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word10" id="g9" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word11" id="i9" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word3" id="l9" maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word8" id="o9" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    
+  </tr>
+  <tr 10>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word11" id="i10" maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word3" id="l10" maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word12" id="n10" maxlength="1"></td>
+    <td><input class="word8,word12" id="o10" maxlength="1"></td>
+    <td><input class="word12" id="p10" maxlength="1"></td>
+    
+  </tr>
+  <tr 11>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word13" id="g11" maxlength="11"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word3" id="l11" maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word8" id="o11" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    
+  </tr>
+  <tr 12>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word13" id="g12" maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word3" id="l12" maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word8" id="o12" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    
+  </tr>
+  <tr 13>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word13" id="g13" maxlength="1"></td>
+    <td><input class="word14" id="h13" maxlength="1"></td>
+    <td><input class="word14,word15" id="i13" maxlength="1"></td>
+    <td><input class="word14" id="j13" maxlength="1"></td>
+    <td><input class="word14" id="k13" maxlength="1"></td>
+    <td><input class="word3,word14" id="l13" maxlength="1"></td>
+    <td><input class="word14" id="m13" maxlength="1"></td>
+    <td><input class="word14,word16" id="n13" maxlength="1"></td>
+    <td><input class="word8,word14" id="o13" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    
+  </tr>
+  <tr 14>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word13" id="g14" maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word15" id="i14" maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word16" id="n14" maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    
+  </tr>
+  <tr 15>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word13" id="g15" maxlength="1"></td>
+    <td><input class="disabled" disabled maxlength="1"></td>
+    <td><input class="word15" id="i15" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="word16" id="n15" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
+    
+  </tr>
+
+
+</table>
+</div>
+</body>
+</html>
