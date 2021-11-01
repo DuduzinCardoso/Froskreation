@@ -4,7 +4,9 @@
 <style>
 
 .disabled  {
-    background-color: black;
+    background-color: rgba(144, 143, 146, 0.959);
+    margin: 0;
+    cursor: default;
 }
 .class {
     display: flex;
@@ -14,40 +16,65 @@
 
 }
 table{
-  width: 50%;
+  width: 0;
+  height: 50%;
   border-collapse: collapse;
   display: block;
 }
 tr{
-    height: 30px;
+    height: 20px;
+    padding: 0;
 }
 td{
-    width: 30px;
-    border: 3px ridge black;
+    padding: 0;
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
     border-collapse: collapse;
-    padding: 4px;
+
     font-family: sans-serif;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 9px;
     text-align: center;
 }
 input{
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     border: none;
     outline: none;
-    padding: 4px;
+    padding: auto;
+    
     font-family: sans-serif;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 15px;
     text-align: center;
+    cursor: grab;
+}
+sup{
+    text-align: end;
 }
 </style>
 </head>
 <script>
     function teste(){
-        
-        if (c1.value + c2.value + c3.value + c4.value + c5.value + c6.value + c7.value + c8.value == "quadcore"){
+        var palavra1 = (c1.value + c2.value + c3.value + c4.value + c5.value + c6.value + c7.value + c8.value).toUpperCase();
+        var palavra2 = (j1.value + k1.value + l1.value + m1.value + n1.value).toUpperCase();
+        var palavra3 = (l1.value +l2.value + l3.value + l4.value +l5.value + l6.value + l7.value + l8.value + l9.value + l10.value + l11.value +l12.value+ l13.value).toUpperCase();
+        var palavra4 = (a2.value + b2.value + c2.value).toUpperCase();
+        var palavra5 = (c4.value + d4.value + e4.value + f4.value + g4.value + h4.value + i4.value + j4.value).toUpperCase();
+        var palavra6 = (g4.value + g5.value).toUpperCase();
+        var palavra7 = (l4.value + m4.value).toUpperCase();
+        var palavra8 = (o7.value + o8.value + o9.value + o10.value + o11.value + o12.value + o13.value).toUpperCase();
+        var palavra9 = (b8.value + c8.value + d8.value + e8.value + f8.value + g8.value+ h8.value + i8.value + j8.value + k8.value + l8.value + m8.value + n8.value + o8.value).toUpperCase();
+        var palavra10 = (g8.value + g9.value).toUpperCase();
+        var palavra11 = (i8.value + i9.value + i10.value).toUpperCase();
+        var palavra12 = (n10.value + o10.value + p10.value).toUpperCase();
+        var palavra13 = (g11.value + g12.value + g13.value + g14.value + g15.value).toUpperCase();
+        var palavra14 = (g13.value + h13.value + i13.value + j13.value + k13.value + l13.value + m13.value + n13.value + o13.value).toUpperCase();
+        var palavra15 = (i13.value + i14.value + i15.value).toUpperCase();
+        var palavra16 = (n13.value + n14.value + n15.value).toUpperCase();
+        if (palavra8 == "QUADCORE"){
 
             impressao.innerHTML += "Palavra 1: Quadcore<br>"
         }else{
@@ -55,29 +82,93 @@ input{
 
         }
 
-        if (j1.value + k1.value + l1.value + m1.value + n1.value == "eprom"){
+        if (palavra2 == "EPROM"){
             impressao.innerHTML += "Palavra 2: EPROM <br>"
         }else{
             console.log("erro na eprom")
         }
 
 
-        if(l1.value +l2.value + l3.value + l4.value +l5.value + l6.value + l7.value + l8.value + l9.value + l10.value + l11.value +l12.value+ l13.value == "registradores"){
+        if(palavra3 == "REGISTRADORES"){
             impressao.innerHTML += "Palavra 3: registradores <br>"
         }else{
             console.log("erro na registradores")
         }
 
-        if(a2.value + b2.value + c2.value == "cpu"){
+        if(palavra4 == "CPU"){
             impressao.innerHTML += "Palavra 4: cpu<br>"
         }else{
             console.log("erro na cpu")
         }
 
-        if(c4.value + d4.value + e4.value + f4.value + g4.value + h4.value + i4.value + j4.value == "dualcore"){
+        if(palavra5 == "DUALCORE"){
             impressao.innerHTML += "Palavra 5: dualcore<br>"
         }else{
-            console.log("erro na dualcore")
+            console.log("erro na dualcore<br>")
+        }
+
+        if(palavra6 == "CS"){
+            impressao.innerHTML += "Palavra 6: CS<br>"
+        }else{
+            console.log("erro na cs")
+        }
+
+        if(palavra5 == "I5"){
+            impressao.innerHTML += "Palavra 7: i5<br>"
+        }else{
+            console.log("erro no i5")
+        }
+
+        if(palavra8 == "DATABUS"){
+            impressao.innerHTML += "Palavra 8: databus<br>"
+        }else{
+            console.log("erro no databus")
+        }
+
+        if(palavra9 == "MEMORIADEMASSA"){
+            impressao.innerHTML += "Palavra 9: memória de massa<br>"
+        }else{
+            console.log("erro na memoria de massa")
+        }
+
+        if(palavra10 == "I7"){
+            impressao.innerHTML += "Palavra 10: i7<br>"
+        }else{
+            console.log("erro no i7")
+        }
+
+        if(palavra11 == "DMA"){
+            impressao.innerHTML += "Palavra 11: dma<br>"
+        }else{
+            console.log("erro na dma")
+        }
+
+        if(palavra12 == "RAM"){
+            impressao.innerHTML += "Palavra 12: ram<br>"
+        }console.log("erro na ram")
+
+        if(palavra13 == "FLASH"){
+            impressao.innerHTML += "Palavra 13: flash<br>"
+        }else{
+            console.log("erro na flash")
+        }
+
+        if(palavra14 == "ADRESSBUS"){
+            impressao.innerHTML += "Palavra 14: adressbus<br>"
+        }else{
+            console.log("erro na adressbus")
+        }
+
+        if(palavra15 == "ROM"){
+            impressao.innerHTML += "Palavra 15: rom<br>"
+        }else{
+            console.log("erro na rom")
+        }
+
+        if(palavra16 == "ULA"){
+            impressao.innerHTML += "Palavra 16: ula<br>"
+        }else{
+            console.log("erro na ula")
         }
         
 
@@ -91,7 +182,7 @@ input{
 <table>
   <tr 1>
     <td><input class="disabled" disabled maxlength="1"></td>
-    <td><input class="disabled" disabled  id="b1" maxlength="1"></td>
+    <td><input class="disabled" disabled  maxlength="1"></td>
     <td><input class="word1" id="c1" maxlength="1"></td>
     <td><input class="disabled" disabled  maxlength="1"></td>
     <td><input class="disabled" disabled  maxlength="1"></td>
@@ -372,7 +463,6 @@ input{
     <td><input class="word16" id="n15" maxlength="1"></td>
     <td><input class="disabled" disabled  maxlength="1"></td>
     <td><input class="disabled" disabled  maxlength="1"></td>
-    
   </tr>
 
 
