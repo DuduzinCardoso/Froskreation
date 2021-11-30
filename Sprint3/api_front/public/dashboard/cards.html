@@ -18,7 +18,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="validarSessao()">
+<body onload="validarSessao() ,atualizacaoPeriodica()">
 
     <div class="janela">
 
@@ -93,21 +93,6 @@
                     <div class="cor-alerta" id="card_2"></div>
 
                 </div>
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_3">-°C</p>
-                    </div>
-                    <div class="cor-alerta ideal" id="card_3"></div>
-                </div>
-                <div class="card">
-                    <h1>Aquário 1</h1>
-                    <div class="temperatura">
-                        <p id="temp_aquario_4">-°C</p>
-                    </div>
-                    <div class="cor-alerta" id="card_4"></div>
-                </div>
-
             </div>
 
         </div>
@@ -121,9 +106,8 @@
     function atualizacaoPeriodica() {
         obterdados(1);
         obterdados(2);
-        obterdados(3);
-        obterdados(4);
-        setTimeout(atualizacaoPeriodica, 5000);
+
+        setTimeout(atualizacaoPeriodica, 3000);
     }
 
     function obterdados(idAquario) {
@@ -154,10 +138,10 @@
     function alertar(temperatura, idAquario) {
         var limites = {
             muito_quente: 25,
-            quente: 22,
-            ideal: 20,
-            frio: 10,
-            muito_frio: 5
+            quente: 12,
+            ideal: 9,
+            frio: 7,
+            muito_frio: 3
         };
 
         var classe_temperatura = 'cor-alerta';

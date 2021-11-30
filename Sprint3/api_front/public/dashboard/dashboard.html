@@ -32,6 +32,7 @@
 
             <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                <div id="impressao"></div>
             </div>
 
             <div class="btn-nav-white">
@@ -63,8 +64,6 @@
                 <!-- O gráfico é chamado de acordo com o id (fk_aquario) do banco  -->
                 <button class="btn-chart" onclick="obterDadosGrafico(1)">Aquario 1</button>
                 <button class="btn-chart" onclick="obterDadosGrafico(2)">Aquario 2</button>
-                <button class="btn-chart" onclick="obterDadosGrafico(3)">Aquario 3</button>
-                <button class="btn-chart" onclick="obterDadosGrafico(4)">Aquario 4</button>
             </div>
             <div class="graph">
                 <canvas id="canvas_grafico"></canvas>
@@ -145,6 +144,8 @@
             dados.datasets[1].data.push(registro.temperatura);
         }
 
+
+
         console.log(JSON.stringify(dados));
 
         var ctx = canvas_grafico.getContext('2d');
@@ -168,7 +169,7 @@
                         id: 'y-temperatura',
                         ticks: {
                             beginAtZero: true,
-                            max: 100,
+                            max: 30,
                             min: 0
                         }
                     }, {
@@ -190,15 +191,7 @@
             }
         });
 
-        function sendData() {
-			var http = new XMLHttpRequest();
-			http.open('POST', 'http://localhost:3000/api/sendData', false);
-			http.send(null);
-		}
 
-        setInterval(() => {
-			sendData();
-		}, 2000);
 
         //Atualiza os dados de 5 em 5 segundos
         setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
@@ -224,6 +217,7 @@
                         dados.datasets[1].data.shift();  // apagar o primeiro de umidade
                         dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de umidade
 
+
                         window.grafico_linha.update();
 
                         proximaAtualizacao = setTimeout(() => atualizarGrafico(idAquario, dados), 2000);
@@ -238,4 +232,6 @@
             });
 
     }
+
+
 </script>
