@@ -8,7 +8,7 @@ body {
 .dash-right .avisos {
   width: 100%;
   /* border: 3px solid pink; */
-  color: rgb(216, 216, 216);
+  color: rgb(0, 0, 0);
   font-family: "Exo 2", sans-serif;
 }
 
@@ -33,13 +33,14 @@ body {
 .dash-right .avisos .div-form input {
   width: 100%;
   border-radius: 5px;
+  border-bottom: 3px solid #21ff03;
 }
 
 .dash-right .avisos .div-form textarea {
   width: 100%;
   /* color: #E6005A; */
-  border: 3px solid #e6005a;
-  background-color: white;
+  border-bottom: 3px solid #21ff03;
+  background-color: #e2e0e0;
   border-radius: 5px;
 }
 
@@ -52,7 +53,7 @@ body {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #21ff03;
   width: 120px;
 }
 
@@ -65,7 +66,7 @@ body {
   font-size: 14px;
   padding: 5px 8px;
   color: white;
-  background-color: #e6005a;
+  background-color: #21ff03;
   width: 80px;
 }
 
@@ -76,7 +77,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
-  border-bottom: 3px solid #e6005a;
+  border-bottom: 3px solid #21ff03;
   padding: 20px;
 }
 
@@ -89,7 +90,7 @@ body {
 }
 
 .div-results .feed-container {
-  background-color: #212124;
+  background-color: #e2e0e0;
   border-radius: 5px;
   margin-bottom: 80px;
 }
@@ -106,7 +107,7 @@ body {
 /* pagina graficos */
 
 .dash-header {
-  background-color: #212124;
+  background-color: #164212;
 }
 
 .dash {
@@ -114,7 +115,7 @@ body {
   position: relative;
   top: 0;
   left: 25%;
-  background-color: #161618;
+  background-color: #ffffff;
 
   /* width: 75%;
     display: flex;
@@ -234,6 +235,6 @@ body {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #21ff03;
   margin: 5px;
 }

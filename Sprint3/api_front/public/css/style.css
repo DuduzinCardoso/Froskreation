@@ -13,7 +13,7 @@ body {
 
 .header {
   color: #32b9cd;
-  border-bottom: 3px solid #32b9cd;
+  border-bottom: 3px solid #21ff03;
   /* border: 3px solid yellow; */
 }
 
@@ -104,7 +104,7 @@ body {
   align-self: center;
   justify-self: center;
   text-align: center;
-  color: #e6005a;
+  color: #21ff03;
   margin: 0;
   /* border: 3px solid orange; */
 }
@@ -130,7 +130,7 @@ body {
 }
 
 .social .box h4 {
-  color: #e6005a;
+  color: #21ff03;
   margin-top: 30px;
 }
 
@@ -207,7 +207,8 @@ button {
 
 input {
   height: 30px;
-  border: 2px solid #e6005a;
+  border-bottom: 2px solid #21ff03;
+  background-color: #e2e0e0;
   border-radius: 10px;
 }
 
@@ -219,7 +220,7 @@ input {
   font-size: 18px;
   padding: 10px 15px;
   color: white;
-  background-color: #e6005a;
+  background-color: #21ff03;
   width: 120px;
   align-self: center;
 }
@@ -265,8 +266,8 @@ form {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  border-right: 3px solid #32b9cd;
-  background-color: #212124;
+  border-right: 3px solid #21ff03;
+  background-color: #2b581e;
   /* border: 3px solid pink; */
 }
 
@@ -274,14 +275,14 @@ form {
   display: flex;
   width: 75%;
   height: fit-content;
-  background-color: #161618;
+  background-color: #ffffff;
   position: relative;
   top: 0;
   left: 25%;
 }
 
 .header-left h1 {
-  color: #32b9cd;
+  color: #21ff03;
 }
 
 .hello {
@@ -291,7 +292,7 @@ form {
 }
 
 .hello h3 {
-  color: #e3b062;
+  color: #fbffca;
   font-weight: 300;
   font-size: 1.2rem;
 }
@@ -303,7 +304,7 @@ form {
 .btn-nav {
   width: 40%;
   color: white;
-  background-color: #e6005a;
+  background-color: #21ff03;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
@@ -311,15 +312,15 @@ form {
 
 .btn-nav-white {
   width: 40%;
-  background-color: white;
-  border: 3px solid #e6005a;
+  background-color: #2b581e;
+  border: 3px solid #21ff03;
   border-radius: 5px;
   text-align: center;
   padding: 2% 5%;
 }
 
 .btn-nav-white h3 {
-  color: #e6005a;
+  color: #21ff03;
   padding: 0;
   margin: 0;
 }
@@ -334,8 +335,8 @@ form {
   margin: 0;
   padding: 0;
   width: 20%;
-  background-color: #32b9cd;
-  color: white;
+  background-color: #fbffca;
+  color: #000000;
   border-radius: 10px;
   text-align: center;
   padding: 10px 15px;

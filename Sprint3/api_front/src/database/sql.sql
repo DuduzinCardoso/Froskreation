@@ -47,7 +47,7 @@ CREATE TABLE medidaLm35 (
 	temperatura DECIMAL(4,2),
     umidade DECIMAL(4,2),
 	momento DATETIME,
-	fk_sensores INT,
+	fk_aquario INT,
     foreign key (fk_sensores) references sensoresCadastrados(id)
 );
 
@@ -80,4 +80,5 @@ GRANT SELECT, INSERT ON Froskreation.medidaLm35 TO 'editor'@'localhost';
 GRANT SELECT, INSERT ON Froskreation.sensoresCadastrados TO 'editor'@'localhost';
 GRANT SELECT, INSERT ON Froskreation.produtos TO 'editor'@'localhost';
 GRANT SELECT, INSERT ON Froskreation.historicoAquisicao TO 'editor'@'localhost';
+FLUSH PRIVILEGES;
 
