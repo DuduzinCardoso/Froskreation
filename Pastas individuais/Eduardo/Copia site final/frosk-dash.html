@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards - Froskreation</title>
+    <link rel="stylesheet" href="styleFroskDash.css">
+</head>
+<body>
+    <!--Header-->
+    <div class="header">
+        <div class="container">
+            <div class="logos">
+                <div class="titulo1"><img style="height: 80px;" src="assets/Froskreation-site/Component3.png" alt=""></div>
+            </div>
+            <ul class="navbar">
+                <li class ="selecionado"><a href="frosk-telaUsuario.html">Menu</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Fórum</a></li>
+                <li><a href="frosk-home.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="telaRelacionavel">
+        <div class="barralateral">
+            <div class="opcao">
+                <p>Nova Filial</p>                
+            </div>
+            <div class="opcao">
+                <p>Relatórios</p>
+            </div>
+            <div class="opcao">
+                <p><a href="#">Dashboard</a></p>
+            </div>
+            <div class="opcao">
+                <p>Calendário</p>
+            </div>
+        </div>
+        <div class="areaADM">
+            <div class="container2">
+                <div class="titulo">
+                    <h1>Dashboard</h1>
+                </div>
+
+                <div class="grafGeral">
+                    <img id="grafico" style="width: 80%;" src="assets/Froskreation-site/GraficoHoje.jpg" alt="">
+                </div>
+
+                <div class="areaDeSelecao">
+                    <select class="selectDash" id="selectAmPm">
+                        <option value="1" class="opcaoSelect">Selecione um período</option>
+                        <option value="2" >Antes do meio-dia</option>
+                        <option value="3" >Depois do meio-dia</option>
+                    </select>
+                    <button class="btn" style="height: 40px;border-radius: 10px;" onclick="troca1()">Grafico diário</button>
+                    <select class="selectDash" id="selectMes">
+                        <option value="1" class="opcaoSelect">Selecione um mês</option>
+                        <option value="2" >Janeiro</option>
+                        <option value="3" >Fevereiro</option>
+                    </select>
+                    <button class="btn" style="height: 40px;border-radius: 10px;" onclick="troca2()">Grafico mensal</button>
+                    <select class="selectDash" id="selectAno">
+                        <option value="1" class="opcaoSelect">Selecione um ano</option>
+                        <option value="2" >2020</option>
+                        <option value="3" >2021</option>
+                    </select>
+                    <button class="btn" style="height: 40px;border-radius: 10px;" onclick="troca3()">Grafico anual</button>
+                    
+                    
+                    
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <h4>Feito com amor por um aluno Bandtec</h4>
+        </div>
+    </div>
+    
+        
+</body>
+</html>
+<script>
+    function troca1() {
+        var opcao = Number(selectAmPm.value);
+        if (opcao == 1){
+            grafico.src = "assets/Froskreation-site/GraficoHoje.jpg"
+        }
+        else if (opcao == 2){
+            grafico.src = "assets/Froskreation-site/GraficoAM.jpg"
+        }
+        else if (opcao == 3){
+            grafico.src = "assets/Froskreation-site/GraficoPM.jpg"
+        }
+            
+    }
+    function troca2() {
+        var opcao = Number(selectMes.value);
+        if (opcao == 1){
+            grafico.src = "assets/Froskreation-site/GraficoHoje.jpg"
+        }
+        else if (opcao == 2){
+            grafico.src = "assets/Froskreation-site/GraficoJAN.jpg"
+        }
+        else if (opcao == 3){
+            grafico.src = "assets/Froskreation-site/GraficoFEV.jpg"
+        }
+            
+    }
+    function troca3() {
+        var opcao = Number(selectAno.value);
+        if (opcao == 1){
+            grafico.src = "assets/Froskreation-site/GraficoHoje.jpg"
+        }
+        else if (opcao == 2){
+            grafico.src = "assets/Froskreation-site/Grafico2020.jpg"
+        }
+        else if (opcao == 3){
+            grafico.src = "assets/Froskreation-site/Grafico2021.jpg"
+        }
+            
+    }
+</script>

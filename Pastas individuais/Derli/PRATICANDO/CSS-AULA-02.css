@@ -1,0 +1,369 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #648767;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+/*Alterando cor do header
+Cor da letra
+e adicionando uma borda inferior com tamanho e cor*/
+.header{
+    border-bottom: 3px solid  brown;
+}
+.header img{
+    width: 200px;
+    border-style: hidden;
+}
+/*Alinhando os itens do container no header
+Alinhamento em row
+Espaçamento longo*/
+.header .container{
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Alterando a fonte do selecionado(iniciar)*/
+.selecionado{
+    font-weight: bold ;
+    color: white;
+}
+
+/*Editando a navBar  e suas tags
+Largura dos campos 800px
+centralizando os itens
+espaçamento curto
+retirar sublinhado embaixo*/
+.navbar{
+    width: 800px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+}
+/*Cor do texto na tag <a>
+tirando a bolinha do *texto
+cor da letra*/
+.header a {
+    text-decoration: none;
+    color: #FFE600;
+    font-family: sans-serif;
+}
+.navbar li {
+    color: #FFE600;
+    padding: 1%;
+    border-radius: 10px;
+    font-family: sans-serif;
+    
+
+    
+}
+
+/*favicon para baixar icones */
+
+/* editando o banner
+letra da cor
+altura
+imagem de fundo 
+alterar tamanho das imagens: cover,
+imagem de fundo p/ nao se repetir: repeat*/
+.banner{
+    color: black;
+    height: 684px;
+    background-image: url(./assets/images/bg-frosk.jpg); 
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* alinhando o container 
+Altura
+display flex 
+alinhando itens: center*/
+.banner .container{
+    height: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Editando o paragráfo
+largura em 50% do texto
+margem e paddin 0
+largura em 280px obs: um estra sobreescrendo o outro
+tamanho da letra 36px
+margem a esquerda 350px
+
+obs: .banner , p indica que tanto banner quanto p tem esse style*/
+.banner p{
+    width: 50%;
+    margin: 0;
+    padding: 0;
+     /*width: 280px;*/
+    font-size: 36px;
+    margin-left: 350px;
+}
+
+.banner .box{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-top: 5%;
+    padding: 1%;
+    background-color:rgba(175, 146, 146, 0.8);
+    width: 50%;
+    height: 100%;
+    align-items: flex-start;
+
+}
+.banner .box a{
+    align-self: center;
+    margin-top: 3px;
+    text-decoration: none;
+    background-color: royalblue;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+}
+
+.banner input{
+    
+    width: 95%;
+    outline: none;
+    border: none;
+    padding: 10px 5px 10px 5px;
+    margin-left: 5px;
+    letter-spacing: 1px;
+    font-size: 15px;
+
+}
+.box ol{
+    padding: 0;
+    margin-bottom: 1px;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 800;
+}
+/*Editando a div social
+cor de fundo da div
+espaçamento interno de 50px 0;*/
+.social {
+    background-color: #E5E5E5;
+    padding: 50px 0;
+}
+
+/* Editando o container do social
+display flex
+justificar com espaçamento proximo
+flex direction para o flex ficar em coluna*/
+.social .container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+ /* editando o titulo
+ display flex: colocando um ao lado do outro
+ justify=content: ao centro*/
+
+/*.social .titulo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+
+}*/
+
+/*Editando o h2
+display flex
+espaçamento interno de 20px
+cor de fundo roxo
+raio da borda em 30px
+alinhando apenas o h2
+justificando si mesmo
+alinhamento do texto
+cor do texto
+margin 0*/
+.social h2{
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    border-radius: 30px;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    color: #e6005a;
+    margin: 0;
+}
+
+/*Alinhando as caixas
+display flex
+*/
+.social .boxes{
+    display: flex;
+    align-items: flex-start;
+}
+
+/*Centralizando as box para caber na tela
+display flex
+flex-wrap garante que as boxes se encaxem na tela
+justificar que os itens fiquem no centro
+direcionar em coluna*/
+.social .box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 33%;
+}
+
+.social .box img{
+    width: 150px;
+    align-self: center;
+}
+
+.social .titulo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.footer {
+    background-color: #32b9cd;
+    height: 150px;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/*centralizando o footer dentro do do container
+display flex
+justificando que fique centralizado
+alinhando os itens para o centro do footer*/
+.footer .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4{
+    margin: 0;
+    padding: 0;
+}
+.container .login h3{
+    margin: 0;
+
+}
+.container .login{
+    background-color: rgba(175, 146, 146, 0.8);
+    padding: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: fixed;
+}
+
+
+.banner .login{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1%;
+    background-color:rgba(175, 146, 146, 0.8);
+    width: 20%;
+    height: 40%;
+    align-items: flex-start;
+    font-family: sans-serif;
+}
+.login h1 , h3{
+    font-style: italic;
+}
+.banner .login a{
+    margin-left: 10px;
+    background-color: royalblue;
+    align-self: center;
+    margin-top: 5%;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+
+}
+
+
+
+/* AULA 3 CRIANDO FORMULÁRIO*/
+/*Precisa conectar essa tela com o html principal*/
+.banner-login{
+    color: black;
+    height: 684px;
+    background-image: url(./assets/images/bg-frosk.jpg); 
+    background-size: cover;
+}
+
+/*Centralizando o .banner login ao centro do banner*/
+.banner-login .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 530px;
+}
+
+
+/*Editando a cor de fundo
+Definindo altura e larura
+display flex
+direcao do flex em coluna
+justificar content center
+alihn-content center
+flex-warp para que nunca os itens de dentro saiam para fora da caixa*/
+.banner-login .card-medio{
+    background-color: #E5E5E5;
+    height: 450px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+button{
+    cursor: pointer;
+}
+input{
+    height: 30px;
+    border: 2px solid #e6005a;
+    border-style: none;
+    outline: none;
+    padding-bottom: 2px;
+    border-radius: 5px;
+
+}
+
+.btn{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border: 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 10px 15px;
+    color: white;
+    background-color: #e6005a;
+    width: 120px;
+    align-self: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
