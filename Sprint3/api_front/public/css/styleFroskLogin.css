@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container {
+    width: 60%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* BANNER */
+.banner {
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    background-image: url(../assets/Froskreation-site/sapo-sossegado-4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.loginArea {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+.loginInputs{
+    width: 600px;
+    height: 600px;
+    color: white;
+    background-color: black;
+    padding-top: 10px;
+
+    
+}
+.loginTitulo {
+    width: 600px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 190px;
+    margin-top: 90px;
+}
+.entradas {
+    margin-top: 60px;
+    margin-left: 95px;
+    width: 600px;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+.campo {
+    display: flex;
+    width: 400px ;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    outline: none;
+}
+.cadastrar {
+    width: 600px;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+.mensagensLogin {
+    width: 155px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 222.5px;
+}
+.cadastrarP {
+    margin-left: 42px;
+}
+.cadastrar a {
+    color: #FFE600;
+    text-decoration: none;
+}
+.efetuarLogin {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.botaoLogin {
+    background-color:#FFE600;
+    width: 100px;
+    height: 50px;
+    color: black;
+    border-radius: 30px;
+    font-weight: 900;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+}

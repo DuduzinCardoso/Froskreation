@@ -1,120 +1,116 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>AcquaTec | Cadastro</title>
-
-
+    <title>Cadastro - Froskreation</title>
+    <link rel="stylesheet" href="css/styleFroskCadastro.css">
     <script src="./js/funcoes.js"></script>
-
-
-    <link rel="icon" href="./assets/icon/favicon.ico">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
 </head>
-
 <body>
+    <body>
+        <div class="banner">
+            <div class="container">
+                <div class="cadArea">                
+                    <div class="cadInputs">
+                        <div class="cadTitulo">
+                            <h1>Vamos efetuar seu cadastro ?</h1>
+                            <h3>Nos diga:</h3>
+                        </div>
+                        <div class="entradas">
+                            <center>
+                            <div class="dupla">
+                                <p>Nome e sobrenome do responsável</p>
+                                <input id="nome_input" class="campo" type="text" placeholder="  Nome  "> 
+                                <input id="sobrenome_input" class="campo" type="text" placeholder="  Sobrenome  "> 
+                            </div>
+                            <div class="dupla">
+                                <p>Empresa e CNPJ</p>
+                                <input id="empresa_input" class="campo" type="text" placeholder="  Empresa  |"> 
+                                <input id="cnpj_input" class="campo" type="text" placeholder="  CNPJ  "> 
+                            </div>
+                            <div class="dupla">
+                                <p>Endereço e bairro da Empresa</p>
+                                <input id="endereco_input" class="campo" type="text" placeholder="  Endereço  "> 
+                                <input id="bairro_input" class="campo" type="text" placeholder="  Bairro  "> 
+                            </div>
+                            <div class="dupla">
+                                <p>Contatos</p>
+                                <input id="email_input" class="campo" type="text" placeholder="  E-mail  ">
+                                <input id="telefone_input" class="campo" type="text" placeholder="  Telefone   "> 
+                            </div>
+                            <div class="dupla">
+                                <p>Senha</p>
+                                <input id="senha_input" class="campo" type="password" placeholder="  Senha  "> 
+                                <input id="confirmacao_senha_input" class="campo" type="password" placeholder="  Confirme senha  "> 
+                            </div>
+                            </center>
+                        </div>
+                        <div class="fazerLogin">
+                            <div class="mensagensLogin">
+                                <p>Já possui cadastro ?</p> 
+                                <p class="cadastrarP"><a href="./login.html">Fazer login</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="efetuarCadastro">
+                            <button onclick="cadastrar()" class="botaoLogin">Cadastrar</button>
+                        </div>
 
-    <!--header inicio-->
-    <div class="header">
-        <div class="container">
-            <h1>AcquaTec</h1>
-            <ul class="navbar">
-                <li>
-                    <a href="./index.html">
-                        Inicial
-                    </a>
-                </li>
-                <li>
-                    <a href="./simulador.html">Simulador</a>
-                </li>
-                <li>|</li>
-                <li>
-                    <a href="./login.html">Login</a>
-                </li>
-                <li class="agora">
-                    <a href="./cadastro.html">Cadastro</a>
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!--header fim-->
+                        <div id="div_aguardar" class="loading-div">
 
-    <div class="banner-login ">
-        <div class="container ">
-            <div class="card medio">
-                <h2>Bem-vindo!</h2>
-                <div class="formulario">
-                    <div id="form_cadastro">
-                        Nome:
-                        <br>
-                        <input id="nome_input" type="text" placeholder="Ada Lovelace">
-                        <br>
-                        <br>
-                        E-mail:
-                        <br>
-                        <input id="email_input" type="text" placeholder="meuemail@provedor.com">
-                        <br>
-                        <br>
-                        Senha:
-                        <br>
-                        <input id="senha_input" type="password" placeholder="******">
-                        <br>
-                        <br>
-                        Confirmação da Senha:
-                        <br>
-                        <input id="confirmacao_senha_input" type="password" placeholder="******">
-                        <br>
-                        <br>
-                        <button class="btn" onclick="cadastrar()">Cadastrar</button>
+                        </div>
+                        <div id="div_erros_login">
+
+                        </div>
+                        
                     </div>
-                </div>
-                <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div>
-
-                <div id="div_erros_login">
-
                 </div>
             </div>
         </div>
-    </div>
-
-    <!--footer inicio-->
-    <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por um aluno BandTec &copy; 2021</h4>
-        </div>
-    </div>
-    <!--footer fim-->
-
-
+    </body>
+    </html>
 </body>
-
 </html>
-
 <script>
-
     function cadastrar() {
         aguardar();
 
         var nomeVar = nome_input.value;
+        var sobrenomeVar = sobrenome_input.value;
+        var empresaVar = empresa_input.value;
+        var cnpjVar = cnpj_input.value
+        var enderecoVar = endereco_input.value;
+        var bairroVar = bairro_input.value;
         var emailVar = email_input.value;
+        var telefoneVar = telefone_input.value;
         var senhaVar = senha_input.value;
         var confirmacaoSenhaVar = confirmacao_senha_input.value;
 
-        if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+        if (nomeVar == ""|| sobrenomeVar == ""|| empresaVar == ""  ||cnpjVar == ""|| enderecoVar == ""|| bairroVar == ""|| telefoneVar == ""  || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "" ) {
 
             window.alert("Preencha todos os campos para prosseguir!");
             if (nomeVar == "") {
                 console.log('nome está em branco')
+            }
+            if (sobrenomeVar == "") {
+                console.log('sobrenome está em branco')
+            }
+            if (empresaVar == "") {
+                console.log('nome da empresa está em branco')
+            }
+            if (cnpjVar == "") {
+                console.log('CNPJ está em branco')
+            }
+            if (enderecoVar == "") {
+                console.log('endereõ está em branco')
+            }
+            if (bairroVar == "") {
+                console.log('bairro está em branco')
+            }
+            if (telefoneVar == "") {
+                console.log('confirmacaoSenha está em branco')
             }
             if (emailVar == "") {
                 console.log('email está em branco')
@@ -147,7 +143,13 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                nomeServer: nomeVar, // sementinha dos gregos que está sendo chamada na controller
+                nomeServer: nomeVar,
+                sobrenomeServer: sobrenomeVar,
+                empresaServer: empresaVar,
+                cnpjServer: cnpjVar,
+                enderecoServer: enderecoVar,
+                bairroServer: bairroVar,
+                telefoneServer: telefoneVar,
                 emailServer: emailVar,
                 senhaServer: senhaVar
             })
@@ -170,5 +172,4 @@
 
         return false;
     }
-
 </script>
