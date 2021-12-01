@@ -1,5 +1,4 @@
 /* para workbench - local - desenvolvimento */
-
 -- DROP DATABASE Froskreation;
 CREATE DATABASE Froskreation;
 CREATE USER IF NOT EXISTS 'editor'@'localhost' IDENTIFIED BY '@editor999';
@@ -22,7 +21,7 @@ CREATE TABLE cliente (
 	senha VARCHAR(50)
     )auto_increment = 1000;
     
--- select * from cliente;
+select * from cliente;
     
 CREATE TABLE sensoresCadastrados(
 id int primary key not null auto_increment,
@@ -30,9 +29,9 @@ tipo varchar(10),
 tanque int,
 fk_cliente int,
 foreign key (fk_cliente) references cliente(id)
-);
+)auto_increment = 1;
 
--- insert into sensoresCadastrados (tipo, tanque, fk_cliente) values ("lm35",1,1000),("lm35",4,1000),("lm35",4,1000),("lm35",5,1000);
+-- insert into sensoresCadastrados (tipo, tanque, fk_cliente) values ("lm35",2,1000),("lm35",3,1000),("lm35",4,1000),("lm35",5,1000);
 
 CREATE TABLE aviso (
 	id INT PRIMARY KEY AUTO_INCREMENT,
@@ -42,16 +41,16 @@ CREATE TABLE aviso (
 	FOREIGN KEY (fk_cliente) REFERENCES cliente(id)
 ); 
 
-CREATE TABLE medidaLm35 (
+CREATE TABLE medida (
 	id INT PRIMARY KEY AUTO_INCREMENT,
 	temperatura DECIMAL(4,2),
     umidade DECIMAL(4,2),
 	momento DATETIME,
 	fk_aquario INT,
-    foreign key (fk_sensores) references sensoresCadastrados(id)
+    foreign key (fk_aquario) references sensoresCadastrados(id)
 );
 
--- select * from medidaLm35;
+-- select * from medida order by momento desc;
 
 CREATE TABLE produtos(
 id int primary key not null auto_increment,
@@ -76,7 +75,7 @@ valorPago decimal(10,2)
 
 GRANT SELECT, INSERT ON Froskreation.cliente TO 'editor'@'localhost';
 GRANT SELECT, INSERT ON Froskreation.aviso TO 'editor'@'localhost';
-GRANT SELECT, INSERT ON Froskreation.medidaLm35 TO 'editor'@'localhost';
+GRANT SELECT, INSERT ON Froskreation.medida TO 'editor'@'localhost';
 GRANT SELECT, INSERT ON Froskreation.sensoresCadastrados TO 'editor'@'localhost';
 GRANT SELECT, INSERT ON Froskreation.produtos TO 'editor'@'localhost';
 GRANT SELECT, INSERT ON Froskreation.historicoAquisicao TO 'editor'@'localhost';

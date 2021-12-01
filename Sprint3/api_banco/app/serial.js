@@ -50,12 +50,21 @@ class ArduinoRead {
                 const parser = new Readline();
                 arduino.pipe(parser);
 
+                
                 parser.on('data', (data) => {
-                    console.log('Temperatura capturada: ', data);
-                    this.dadosTemperatura.push(parseFloat(data));
-                    
-                    inserirBanco(data, this.dadosTemperatura);
+                    let value = data.toString().split(';');
+                    let temperature = parseFloat(value[1].replace('\r',''));
+                    let humidity = parseFloat(value[0].replace('\r',''));
+                    /*
+                    this.listData.push(humidity);
+                    this.__listDataTemp.push(temperature)
+                    console.log("Temp: ",temperature," Umidade: ",humidity);
+                    */
+                    inserirBanco(temperature, humidity)
                 });
+
+
+
         }).catch(error => console.log(error));
     }
 }
@@ -64,17 +73,25 @@ const serial = new ArduinoRead();
 serial.SetConnection();
 
 
-function inserirBanco(data,lista,fk_aquario){
-    lista.push(parseFloat(data));
+function inserirBanco(temp,umi){
 
-
-    let valor = lista[lista.length - 1];
+    let fk1 = 1;
+    let fk2 = 2;
     
-    let sql = `INSERT INTO medida(temperatura,umidade,momento,fk_aquario) VALUES(${valor.toFixed(2)},null,now(),${fk_aquario})`;
-    let valores = [valor];
+    console.log(fk1);
+    let sql1 = "INSERT INTO medida(temperatura,umidade,fk_aquario,momento) VALUES( ? , now())";
+    let valores1 = [temp,umi,fk1];
+    console.log(fk2);
+    let sql2 = "INSERT INTO medida(temperatura,umidade,fk_aquario,momento) VALUES( ? , now())";
+    let valores2 = [temp,umi,fk2];
 
-    db.query(sql, [valores], function(err, result){
+    db.query(sql1, [valores1], function(err, result){
         if(err) throw err;
-        console.log("Medidas inseridas: " + result.affectedRows)
+        console.log("Medidas inseridas tanque 1: " + result.affectedRows)
+    });
+
+    db.query(sql2, [valores2], function(err, result){
+        if(err) throw err;
+        console.log("Medidas inseridas tanque 2: " + result.affectedRows)
     });
 };
