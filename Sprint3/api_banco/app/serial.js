@@ -19,12 +19,14 @@ class ArduinoRead {
     
     geradorDados() {
         setInterval(() => {
-            let dadosGerados = sensors.lm35();
-            let fk_aquario = (Math.random() * 3 + 1);
-            console.log('Temperatura gerada: ', parseFloat(dadosGerados.toFixed(2)));
-            this.dadosTemperatura.push(dadosGerados); 
+            let dadosGerados = sensors.dht11();
 
-            inserirBanco(dadosGerados,this.dadosTemperatura,fk_aquario);
+            console.log('Temperatura gerada: ' + dadosGerados);
+            this.dadosTemperatura.push(dadosGerados); 
+            let temp = dadosGerados[0];
+            let umi = dadosGerados[1];
+
+            inserirBanco(temp, umi);
 
         }, 2000);
     }
@@ -77,13 +79,15 @@ function inserirBanco(temp,umi){
 
     let fk1 = 1;
     let fk2 = 2;
+
+    let temp2 = temp * 0.6;
     
     console.log(fk1);
     let sql1 = "INSERT INTO medida(temperatura,umidade,fk_aquario,momento) VALUES( ? , now())";
     let valores1 = [temp,umi,fk1];
     console.log(fk2);
     let sql2 = "INSERT INTO medida(temperatura,umidade,fk_aquario,momento) VALUES( ? , now())";
-    let valores2 = [temp,umi,fk2];
+    let valores2 = [temp2,umi,fk2];
 
     db.query(sql1, [valores1], function(err, result){
         if(err) throw err;

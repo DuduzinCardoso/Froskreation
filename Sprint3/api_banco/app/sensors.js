@@ -28,13 +28,16 @@ function ldr() {
 
   return random;
 }
+//function dht11(options)
+//minHumidity = options.minHum;
+//maxHumidity = options.maxHum;
 
-function dht11(options) {
-  minHumidity = options.minHum;
-  maxHumidity = options.maxHum;
+function dht11() {
+  minHumidity = 20;
+  maxHumidity = 80;
 
-  minTemperature = options.minTemp;
-  maxTemperature = options.maxTemp;
+  minTemperature = 3;
+  maxTemperature = 26;
 
   if (minHumidity < 20 || maxHumidity > 100) {
     throw new Error(
@@ -48,7 +51,7 @@ function dht11(options) {
     );
   }
 
-  minTemperature = typeof minTemperature == "undefined" ? 18 : minTemperature;
+  minTemperature = typeof minTemperature == "undefined" ? 3 : minTemperature;
   maxTemperature = typeof maxTemperature == "undefined" ? 25 : maxTemperature;
 
   minHumidity = typeof minHumidity == "undefined" ? 20 : minHumidity;
@@ -61,7 +64,7 @@ function dht11(options) {
   let randomTemperature =
     Math.random() * (maxTemperature - minTemperature) + minTemperature;
 
-  return [randomHumidity, randomTemperature];
+  return [parseFloat(randomTemperature.toFixed(2)), randomHumidity];
 }
 
 module.exports = { lm35, trc5000, ldr, dht11 };
